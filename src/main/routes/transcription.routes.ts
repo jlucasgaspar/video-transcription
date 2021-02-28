@@ -1,4 +1,4 @@
-import { router } from '../adapters/IExpress';
+import { router } from '../protocols/IExpress';
 
 router.get('/transcrever', (req, res) => {
     res.json({ ok: true });

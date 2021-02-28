@@ -1,4 +1,4 @@
-import { IExpress } from '../adapters/IExpress';
+import { IExpress } from '../protocols/IExpress';
 
 import { transcriptionRoutes } from '../routes';
 
