@@ -1,15 +1,11 @@
 import { router } from '../protocols/IExpress';
 import { upload } from '../protocols/IMulter';
 import { uploadConfig } from '../config/upload';
+import { adaptRoute } from '../adapters/routeAdapter';
+import { makeTranscriptionController } from '../factories/makeTranscriptionController';
 
-const uploadFile = upload(uploadConfig.multer)
+const uploadFile = upload(uploadConfig.multer);
 
-router.get('/transcrever',  (req, res) => {
-    res.json({ ok: true });
-});
-
-router.post('/transcrever', uploadFile.single('file'), (req, res) => {
-    res.json({ ok: false });
-});
+router.post('/transcrever', uploadFile.single('file'), adaptRoute(makeTranscriptionController()));
 
 export const transcriptionRoutes = router;
