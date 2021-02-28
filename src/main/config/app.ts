@@ -1,9 +1,5 @@
-import express, { Router } from 'express';
+import { app } from '../adapters/IExpress';
 import { setupRoutes } from './route'
-
-export const router = Router();
-
-const app = express();
 
 setupRoutes(app);
 
