@@ -3,7 +3,7 @@ import crypto from 'crypto';
 import { env } from './env';
 import { upload } from '../protocols/IMulter';
 
-const tempFolder = path.resolve(__dirname, '..', '..', '..', 'tmp');
+const tempFolder = path.resolve(__dirname, '..', '..', '..', 'temp');
 
 const uploadConfig =  {
     driver: env.STORAGE_DRIVER,

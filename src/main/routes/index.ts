@@ -1,1 +1,1 @@
-export * from './transcription.routes';
+export * from './transcriptionRoutes';
